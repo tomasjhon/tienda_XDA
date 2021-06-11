@@ -1,0 +1,21 @@
+.hero {  
+
+    // Desktop
+    height: 600px;
+    display: grid;
+    grid-column: 2 / 3;
+    box-sizing: border-box;
+    background-image: url(../img/imagen1.png);
+    background-position:center;
+    background-repeat: none;
+    background-size: cover;  
+    
+
+
+    
+  /*  @include media-breakpoint-up(md) {
+          // tablet
+        height: 500px;            
+    }        
+*/
+}

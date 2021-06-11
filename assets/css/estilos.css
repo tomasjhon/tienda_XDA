@@ -1,0 +1,152 @@
+Body, html * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+}
+
+.hero {
+  height: 600px;
+  display: grid;
+  grid-column: 2/3;
+  box-sizing: border-box;
+  background-image: url(../img/imagen1.png);
+  background-position: center;
+  background-repeat: none;
+  background-size: cover;
+  /*  @include media-breakpoint-up(md) {
+            // tablet
+          height: 500px;            
+      }        
+  */
+}
+
+main {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  margin: 0;
+}
+
+.infonews {
+  display: grid;
+  grid-template-rows: 90% 10%;
+  grid-column: 1/2;
+}
+
+.information {
+  width: 200px;
+  margin: 0;
+}
+
+.newsletters {
+  display: grid;
+  grid-template-columns: 90% 10%;
+}
+.newsletters__box {
+  padding: 3rem;
+  background-color: #0c0910;
+  height: 9rem;
+  color: #fff;
+}
+.newsletters__title {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+.newsletters__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.newsletters__email {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+.newsletters__subscribe {
+  height: 15rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+.newsletters__name {
+  transform: rotate(90deg);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+@media all and (max-width: 600px) {
+  information, .newsletters, .hero {
+    grid-column: 1/span 2;
+  }
+}
+.navbar {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar__logo {
+  width: 6rem;
+  height: 6rem;
+  background-color: #0c0910;
+  display: grid;
+  place-items: center;
+}
+.navbar__title {
+  background-color: #0c0910;
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+}
+
+.collapse {
+  display: grid;
+  justify-content: end;
+  /* &__list{
+       display: none;
+   }
+
+   &__menu:checked  ~ &__list{
+       display:block;
+
+
+   }
+
+   &__menu{
+       display: none;
+   }
+
+   &__label {
+       box-sizing: border-box; 
+       width: $xx-large;
+       height: $xx-large;
+     }
+
+   &__item{
+       display: block;
+       margin: 0;
+       padding: 0.5rem;
+       list-style: none;
+  }
+  */
+}
+.collapse__list {
+  display: inline-flex;
+  width: 20rem;
+  justify-content: space-around;
+}
+.collapse__menu, .collapse__label {
+  display: none;
+}
+.collapse__link {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=estilos.css.map */

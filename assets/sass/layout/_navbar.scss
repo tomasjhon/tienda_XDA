@@ -1,0 +1,25 @@
+//Estilos del Navbar
+
+.navbar{
+    display: grid;
+    grid-template-columns: 1fr 1fr;  
+    justify-content: space-between; 
+    align-items: center;
+     
+    &__logo{   
+        width: 6rem;
+        height: 6rem;   
+        background-color: $smoky-black; 
+        display: grid;
+        place-items: center;       
+    }
+
+    &__title{               
+        background-color: $smoky-black;   
+        font-family: $old-standard;
+        font-weight: $font-bold;
+        font-size: $xx-large;
+        color: $white;     
+        
+    }
+}

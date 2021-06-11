@@ -1,0 +1,45 @@
+.collapse{
+    display: grid;    
+    justify-content:end;
+
+    &__list{
+        display: inline-flex;
+        width: 20rem;
+        justify-content: space-around;    
+       
+    }  
+    &__menu, &__label{
+        display: none;
+    }   
+   /* &__list{
+        display: none;
+    }
+      
+    &__menu:checked  ~ &__list{
+        display:block;
+
+
+    }
+    
+    &__menu{
+        display: none;
+    }
+
+    &__label {
+        box-sizing: border-box; 
+        width: $xx-large;
+        height: $xx-large;
+      }
+
+    &__item{
+        display: block;
+        margin: 0;
+        padding: 0.5rem;
+        list-style: none;
+   }
+   */
+
+   &__link{
+       text-decoration: none;
+   }
+}

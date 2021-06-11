@@ -1,0 +1,75 @@
+main{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 0;  
+    
+}
+
+
+
+.infonews{
+    display: grid;
+    grid-template-rows: 90% 10%;
+    grid-column: 1 / 2;
+}
+
+.information{
+    width: 200px;
+    margin: 0;
+    
+}
+.newsletters{
+    display: grid;
+        grid-template-columns: 90% 10%;
+
+    &__box{       
+        padding: 3rem;
+        background-color: $smoky-black ;
+        height: 9rem;
+        color: $white;
+        
+    }    
+    &__title{
+        font-family: $old-standard;
+        font-weight: $font-bold;
+        font-size: $xx-large;
+        margin-bottom: 2rem;
+    }
+
+    &__text{
+        font-family: $raleway;
+        font-weight: $font-regular;
+        font-size: $small;
+    }
+
+    &__email {
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+    }
+
+    &__subscribe{
+        height: 15rem;
+        display: grid;
+        justify-content: center;
+        align-items: center;  
+        font-weight: $font-bold;
+    }
+
+    &__name{
+        transform: rotate(90deg); 
+        font-size: $large;
+        font-weight: $font-bold;
+   
+    }
+}
+
+
+    @media all and (max-width: 600px){
+        information, .newsletters, .hero{
+            grid-column: 1 / span 2 ;
+        }
+
+    }
+
