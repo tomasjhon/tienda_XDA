@@ -22,58 +22,56 @@
    
 </head>
 <body>
-    <!-- Barra de navegación --> 
-    <nav class="navbar" >
-        <div class="navbar__logo">
-            <h2 class="navbar__title">XDA</h2>
-        </div>
-                   
-        <section class="collapse">           
-            <input class="collapse__menu" type="checkbox" id="menu">
-            <label class="collapse__label" for="menu"><i class="fas fa-bars collapse__icon"></i></label>
-            <ul class="collapse__list">
-                <li class="collapse__item">
-                    <a class="collapse__link" href="">Mujer</a>
-                </li >
-                <li class="collapse__item">
-                    <a class="collapse__link" href="">Hombre</a>
-                </li>
-                <li class="collapse__item">
-                    <a class="collapse__link" href="">Accesorios</a>
-                </li>
-                <li class="collapse__item">
-                    <a class="collapse__link" href="">Blog</a>
-                </li>
-            </ul>
+    <main>
+        <header>
+            <div class="navbar__logo">
+                <h3 class="navbar__title">XDA</h3>
+            </div>                      
+        </header>
+        <nav>
+            <div class="collapse">           
+                <input class="collapse__menu" type="checkbox" id="menu">
+                <label class="collapse__label" for="menu"><i class="fas fa-bars collapse__icon"></i></label>
+                <ul class="collapse__list">
+                    <li class="collapse__item">
+                        <a class="collapse__link" href="">Mujer</a>
+                    </li >
+                    <li class="collapse__item">
+                        <a class="collapse__link" href="">Hombre</a>
+                    </li>
+                    <li class="collapse__item">
+                        <a class="collapse__link" href="">Accesorios</a>
+                    </li>
+                    <li class="collapse__item">
+                        <a class="collapse__link" href="">Blog</a>
+                    </li>
+                </ul>
+            </div>             
+        </nav>
+        <section>
+            <article></article>            
         </section>
-        
-    </nav>
-
-<!-- Contenido --> 
-    <main class="main">    
-        <header class="hero"> <!-- Imagen -->             
-        </header>   
-        <section class="infonews"> <!-- Información --> 
-            <section class="information"> <!-- Información y Newsletters -->
-                <h1 class="information__title">Lorem ipsum dolor sit.</h1>
-                <p class="information__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint voluptates soluta iure beatae quo, expedita explicabo praesentium dolorum ad fugit vero delectus autem modi dicta officiis aut repellat nam minima?</p>
-                <button class="information__button">Ir a tienda</button>
-            </section>
-
-            <section class="newsletters"> <!-- Newsletters -->
-                <div class="newsletters__box"> <!-- Newsletters - Datos -->
-                    <h2 class="newsletters__title">Newsletters</h2>
-                    <h6 class="newsletters__text">Correo Electrónico</h6>
-                    <input class="newsletters__email" type="email" placeholder="ingresa tu correo electrónico">
+        <aside>
+            <!-- <div class="infonews"></div> -->
+                <div class="information"> <!-- Información y Newsletters -->
+                    <h1 class="information__title">Lorem ipsum dolor sit.</h1>
+                    <p class="information__paragraph">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint voluptates soluta iure beatae quo, expedita explicabo praesentium dolorum ad fugit vero delectus autem modi dicta officiis aut repellat nam minima?</p>
+                    <button class="information__button">Ir a tienda</button>
                 </div>
-
-                <div class="newsletters__subscribe">  <!-- Newsletters - suscribir -->
-                    <h5 class="newsletters__name">Suscribir</h5>
-                </div>
-            </section>
-        </section>
-
-    </main>
-
+                <!-- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br> -->
+                <div class="newsletters"> 
+                    <div class="newsletters__box"> 
+                        <h2 class="newsletters__title">Newsletters</h2>
+                        <h6 class="newsletters__text">Correo Electrónico</h6>
+                        <input class="newsletters__email" type="email" placeholder="ingresa tu correo electrónico">
+                    </div>
+                    <div class="newsletters__subscribe"> 
+                        <h5 class="newsletters__name">Suscribir</h5>
+                    </div>
+                </div>   
+            <!-- </div> -->
+        </aside>
+        <footer></footer>
+      </main>
 </body>
 </html>

@@ -1,108 +1,99 @@
-Body, html * {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: "Raleway", sans-serif;
-}
-
-.hero {
-  height: 600px;
+main {
+  color: gainsboro;
+  margin: 0 auto;
+  max-width: 1000px;
+  min-height: 100vh;
   display: grid;
-  grid-column: 2/3;
-  box-sizing: border-box;
+  grid-template-columns: 100%;
+  grid-template-rows:
+    50px
+    50px
+    1fr
+    100px
+    200px;
+  grid-template-areas:
+    "my-header my-header my-header"
+    "my-nav my-nav my-nav"
+    "my-section my-section my-section"
+    "my-aside my-aside my-aside"
+    "my-footer my-footer my-footer";
+}
+
+header {
+  grid-area: my-header;
+}
+
+nav {
+  grid-area: my-nav;
+}
+
+aside {
+  grid-area: my-aside;
+  justify-self: start;
+}
+
+section {
+  grid-area: my-section;
   background-image: url(../img/imagen1.png);
   background-position: center;
   background-repeat: none;
   background-size: cover;
-  /*  @include media-breakpoint-up(md) {
-            // tablet
-          height: 500px;            
-      }        
-  */
+  box-sizing: border-box;
 }
 
-main {
-  width: 100%;
-  height: auto;
-  display: grid;
-  grid-template-columns: 40% 60%;
-  margin: 0;
+footer {
+  grid-area: my-footer;
+  grid-column: 1 / 1;
+  grid-row: 3 / 4;
 }
 
-.infonews {
-  display: grid;
-  grid-template-rows: 90% 10%;
-  grid-column: 1/2;
-}
-
-.information {
-  width: 200px;
-  margin: 0;
-}
-
-.newsletters {
-  display: grid;
-  grid-template-columns: 90% 10%;
-}
-.newsletters__box {
-  padding: 3rem;
-  background-color: #0c0910;
-  height: 9rem;
-  color: #fff;
-}
-.newsletters__title {
-  font-family: "Old Standard TT", serif;
-  font-weight: 700;
-  font-size: 30px;
-  margin-bottom: 2rem;
-}
-.newsletters__text {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-}
-.newsletters__email {
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-}
-.newsletters__subscribe {
-  height: 15rem;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-  font-weight: 700;
-}
-.newsletters__name {
-  transform: rotate(90deg);
-  font-size: 18px;
-  font-weight: 700;
-}
-
-@media all and (max-width: 600px) {
-  information, .newsletters, .hero {
-    grid-column: 1/span 2;
+@media (min-width: 600px) and (max-width: 1000px) {
+  main {
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows:
+      150px
+      100px
+      1fr
+      100px;
+    grid-template-areas:
+      "my-header my-header my-header"
+      "my-nav my-nav my-nav"
+      "my-aside my-section my-section"
+      "my-footer my-footer my-footer";
   }
 }
+
+@media (min-width: 1001px) {
+  main {
+    grid-template-columns: 350px 1fr 200px;
+    grid-template-rows:
+      100px
+      1fr
+      100px;
+    grid-template-areas:
+      "my-header my-nav my-nav"
+      "my-aside my-section my-section";
+    /* "my-footer my-section my-section"; */
+  }
+}
+
 .navbar {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   align-items: center;
 }
 .navbar__logo {
-  width: 6rem;
-  height: 6rem;
+  width: 4rem;
+  height: 4rem;
   background-color: #0c0910;
-  display: grid;
   place-items: center;
 }
+
 .navbar__title {
   background-color: #0c0910;
   font-family: "Old Standard TT", serif;
   font-weight: 700;
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -142,11 +133,60 @@ main {
   width: 20rem;
   justify-content: space-around;
 }
-.collapse__menu, .collapse__label {
+.collapse__menu,
+.collapse__label {
   display: none;
 }
 .collapse__link {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=estilos.css.map */
+.infonews {
+  /* display: grid;
+  grid-template-rows: 90% 10%;
+  grid-column: 1/2; */
+}
+
+.information {
+  width: 200px;
+  margin: 0;
+}
+
+.newsletters {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  align-self: end;
+}
+.newsletters__box {
+  padding: 3rem;
+  background-color: #0c0910;
+  height: 9rem;
+  color: #fff;
+}
+.newsletters__title {
+  font-family: "Old Standard TT", serif;
+  font-weight: 200;
+  font-size: 30px;
+  margin-bottom: 2rem;
+}
+.newsletters__text {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+}
+.newsletters__email {
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+.newsletters__subscribe {
+  height: 15rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-weight: 100;
+}
+.newsletters__name {
+  transform: rotate(90deg);
+  font-size: 18px;
+  font-weight: 200;
+}
